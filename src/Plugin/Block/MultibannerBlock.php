@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Plugin\Block;
+namespace Drupal\multibanners\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -9,11 +9,11 @@ use Drupal\Core\Form\FormStateInterface;
  * Provides a 'Banner block' block.
  *
  * @Block(
- *  id = "banner_block",
+ *  id = "multibanner_block",
  *  admin_label = @Translation("Banner block"),
  * )
  */
-class BannerBlock extends BlockBase {
+class MultibannerBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
@@ -74,7 +74,7 @@ class BannerBlock extends BlockBase {
         $value .= ' ';
         $value .= $node->getType();
         // $value .= ' ';
-        // $value .= $node->get('field_test_str')->value;
+        // $value .= $node->get('field_text')->value;
       }
     }
     return array(

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - featured_banners
+    - multibanners
     - file
     - image
 id: banner.field_banner_image

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners;
+namespace Drupal\multibanners;
 
 use Drupal\Core\Entity\EntityAccessControlHandler;
 use Drupal\Core\Entity\EntityInterface;
@@ -10,7 +10,7 @@ use Drupal\Core\Access\AccessResult;
 /**
  * Access controller for the Banner entity.
  *
- * @see \Drupal\featured_banners\Entity\Banner.
+ * @see \Drupal\multibanners\Entity\Banner.
  */
 class BannerAccessControlHandler extends EntityAccessControlHandler {
 
@@ -18,7 +18,7 @@ class BannerAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-    /** @var \Drupal\featured_banners\Entity\BannerInterface $entity */
+    /** @var \Drupal\multibanners\Entity\BannerInterface $entity */
     switch ($operation) {
       case 'view':
         if (!$entity->isPublished()) {

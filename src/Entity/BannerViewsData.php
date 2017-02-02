@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Entity;
+namespace Drupal\multibanners\Entity;
 
 use Drupal\views\EntityViewsData;
 

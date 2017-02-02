@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.banner.banner.field_banner_image
   module:
-    - featured_banners
+    - multibanners
     - image
 id: banner.banner.default
 targetEntityType: banner

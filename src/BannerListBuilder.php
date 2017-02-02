@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners;
+namespace Drupal\multibanners;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
@@ -10,7 +10,7 @@ use Drupal\Core\Url;
 /**
  * Defines a class to build a listing of Banner entities.
  *
- * @ingroup featured_banners
+ * @ingroup multibanners
  */
 class BannerListBuilder extends EntityListBuilder {
 
@@ -29,7 +29,7 @@ class BannerListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\featured_banners\Entity\Banner */
+    /* @var $entity \Drupal\multibanners\Entity\Banner */
     $row['name'] = $this->l(
       $entity->label(),
       new Url(

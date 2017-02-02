@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Form;
+namespace Drupal\multibanners\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Form controller for Banner edit forms.
  *
- * @ingroup featured_banners
+ * @ingroup multibanners
  */
 class BannerForm extends ContentEntityForm {
 
@@ -16,7 +16,7 @@ class BannerForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\featured_banners\Entity\Banner */
+    /* @var $entity \Drupal\multibanners\Entity\Banner */
     $form = parent::buildForm($form, $form_state);
 
     $entity = $this->entity;

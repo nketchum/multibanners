@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners;
+namespace Drupal\multibanners;
 
 use Drupal\content_translation\ContentTranslationHandler;
 

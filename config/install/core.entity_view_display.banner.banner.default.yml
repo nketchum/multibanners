@@ -5,7 +5,7 @@ dependencies:
     - field.field.banner.banner.field_banner_image
     - image.style.large
   module:
-    - featured_banners
+    - multibanners
     - image
     - user
 id: banner.banner.default

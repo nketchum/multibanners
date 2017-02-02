@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Entity;
+namespace Drupal\multibanners\Entity;
 
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
@@ -9,7 +9,7 @@ use Drupal\user\EntityOwnerInterface;
 /**
  * Provides an interface for defining Banner entities.
  *
- * @ingroup featured_banners
+ * @ingroup multibanners
  */
 interface BannerInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
@@ -29,7 +29,7 @@ interface BannerInterface extends  ContentEntityInterface, EntityChangedInterfac
    * @param string $name
    *   The Banner name.
    *
-   * @return \Drupal\featured_banners\Entity\BannerInterface
+   * @return \Drupal\multibanners\Entity\BannerInterface
    *   The called Banner entity.
    */
   public function setName($name);
@@ -48,7 +48,7 @@ interface BannerInterface extends  ContentEntityInterface, EntityChangedInterfac
    * @param int $timestamp
    *   The Banner creation timestamp.
    *
-   * @return \Drupal\featured_banners\Entity\BannerInterface
+   * @return \Drupal\multibanners\Entity\BannerInterface
    *   The called Banner entity.
    */
   public function setCreatedTime($timestamp);
@@ -69,7 +69,7 @@ interface BannerInterface extends  ContentEntityInterface, EntityChangedInterfac
    * @param bool $published
    *   TRUE to set this Banner to published, FALSE to set it to unpublished.
    *
-   * @return \Drupal\featured_banners\Entity\BannerInterface
+   * @return \Drupal\multibanners\Entity\BannerInterface
    *   The called Banner entity.
    */
   public function setPublished($published);

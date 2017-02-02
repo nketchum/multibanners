@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.banner.field_banner_image
   module:
-    - featured_banners
+    - multibanners
     - image
 id: banner.banner.field_banner_image
 field_name: field_banner_image

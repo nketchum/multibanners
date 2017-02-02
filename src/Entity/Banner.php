@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Entity;
+namespace Drupal\multibanners\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -12,26 +12,26 @@ use Drupal\user\UserInterface;
 /**
  * Defines the Banner entity.
  *
- * @ingroup featured_banners
+ * @ingroup multibanners
  *
  * @ContentEntityType(
  *   id = "banner",
  *   label = @Translation("Banner"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\featured_banners\BannerListBuilder",
- *     "views_data" = "Drupal\featured_banners\Entity\BannerViewsData",
- *     "translation" = "Drupal\featured_banners\BannerTranslationHandler",
+ *     "list_builder" = "Drupal\multibanners\BannerListBuilder",
+ *     "views_data" = "Drupal\multibanners\Entity\BannerViewsData",
+ *     "translation" = "Drupal\multibanners\BannerTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\featured_banners\Form\BannerForm",
- *       "add" = "Drupal\featured_banners\Form\BannerForm",
- *       "edit" = "Drupal\featured_banners\Form\BannerForm",
- *       "delete" = "Drupal\featured_banners\Form\BannerDeleteForm",
+ *       "default" = "Drupal\multibanners\Form\BannerForm",
+ *       "add" = "Drupal\multibanners\Form\BannerForm",
+ *       "edit" = "Drupal\multibanners\Form\BannerForm",
+ *       "delete" = "Drupal\multibanners\Form\BannerDeleteForm",
  *     },
- *     "access" = "Drupal\featured_banners\BannerAccessControlHandler",
+ *     "access" = "Drupal\multibanners\BannerAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\featured_banners\BannerHtmlRouteProvider",
+ *       "html" = "Drupal\multibanners\BannerHtmlRouteProvider",
  *     },
  *   },
  *   base_table = "banner",

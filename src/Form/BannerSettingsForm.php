@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\featured_banners\Form;
+namespace Drupal\multibanners\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,9 +8,9 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Class BannerSettingsForm.
  *
- * @package Drupal\featured_banners\Form
+ * @package Drupal\multibanners\Form
  *
- * @ingroup featured_banners
+ * @ingroup multibanners
  */
 class BannerSettingsForm extends FormBase {
 
