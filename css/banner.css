@@ -1,0 +1,73 @@
+/* Unslider */
+
+.unslider {
+  position: relative;
+}
+
+.unslider-arrow {
+  background: #333;
+  bottom: 50%;
+  color: #fff;
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  padding: 1.5em;
+  text-transform: uppercase;
+  z-index: 20;
+}
+
+.unslider-arrow:hover {
+  background: #eee;
+}
+
+.unslider-arrow.prev {
+  left: 0;
+}
+
+.unslider-arrow.next {
+  right: 0;
+}
+
+.unslider-nav {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.unslider-nav ol {
+  background: #eee;
+  display: inline-block;
+  padding: 1em;
+  position: relative;
+  z-index: 20;
+}
+
+.unslider-nav ol li {
+  border-color: #333;
+}
+
+.unslider-nav ol li.unslider-active {
+  background: #333;
+}
+
+/* Multibanners */
+
+.banner-wrapper img {
+  height: auto;
+  max-width: 100%;
+}
+
+.banner-wrapper {
+  position: relative;
+}
+
+.banner-wrapper .field--name-name {
+  background-color: #333;
+  bottom: 0;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 2em 4em;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+}

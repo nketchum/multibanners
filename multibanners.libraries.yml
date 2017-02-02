@@ -1,0 +1,15 @@
+unslider:
+  version: VERSION
+  js:
+    /libraries/unslider/dist/js/unslider-min.js: {}
+    js/banner.js: {}
+  css:
+    theme:
+      /libraries/unslider/dist/css/unslider.css: {}
+      /libraries/unslider/dist/css/unslider-dots.css: {}
+      css/banner.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once

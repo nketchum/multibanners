@@ -1,5 +1,5 @@
 banner.admin.structure.settings:
   title: Banners
-  description: 'Configure banner entities'
+  description: 'Configure banners'
   route_name: banner.settings
   parent: system.admin_structure
