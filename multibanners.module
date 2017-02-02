@@ -20,22 +20,3 @@ function multibanners_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
-
-/**
- * Implements hook_theme().
- */
-function multibanners_theme() {
-  return array(
-    'banner' => array(
-      'file' => 'banner.page.inc',
-      'render element' => 'elements',
-      'template' => 'banner',
-    ),
-    'field__banner__name' => array(
-      'base hook' => 'field',
-    ),
-    'field__banner__field_banner_image' => array(
-      'base hook' => 'field',
-    ),
-  );
-}

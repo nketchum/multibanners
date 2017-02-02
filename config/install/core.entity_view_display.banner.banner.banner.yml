@@ -2,28 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.banner.banner
     - field.field.banner.banner.field_banner_image
+    - image.style.large
   module:
     - image
     - multibanners
-id: banner.banner.default
+id: banner.banner.banner
 targetEntityType: banner
 bundle: banner
-mode: default
+mode: banner
 content:
   field_banner_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  name:
+    label: hidden
+    type: string
     weight: 1
     settings:
-      preview_image_style: ''
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: image_image
-  name:
-    type: string_textfield
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
   user_id: true

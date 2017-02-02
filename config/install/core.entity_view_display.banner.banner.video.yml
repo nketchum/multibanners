@@ -2,28 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.banner.video
     - field.field.banner.banner.field_banner_image
+    - image.style.thumbnail
   module:
     - image
     - multibanners
-id: banner.banner.default
+id: banner.banner.video
 targetEntityType: banner
 bundle: banner
-mode: default
+mode: video
 content:
   field_banner_image:
     weight: 1
+    label: hidden
     settings:
-      preview_image_style: ''
-      progress_indicator: throbber
+      image_style: thumbnail
+      image_link: ''
     third_party_settings: {  }
-    type: image_image
+    type: image
   name:
-    type: string_textfield
+    label: hidden
+    type: string
     weight: 0
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
   user_id: true

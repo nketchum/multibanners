@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_banner_type
+field_name: field_banner_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: banner
+      label: 'Large banner'
+    -
+      value: flex_grid
+      label: 'Flexible grid'
+    -
+      value: video_grid
+      label: 'Video grid'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

@@ -1,4 +1,4 @@
-name: Featured banners
+name: Multibanners
 type: module
 description: Customizable and client-configurable banner content type entity and associated fields.
 core: 8.x

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - multibanners
+id: banner.flexgrid
+label: Flexgrid
+targetEntityType: banner
+cache: true
