@@ -26,7 +26,13 @@ function multibanners_help($route_name, RouteMatchInterface $route_match) {
  */
 function multibanners_preprocess_block(&$variables) {
   if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-banner_block') {
-    $variables['#attached']['library'][] = 'multibanners/unslider';
+    $variables['#attached']['library'][] = 'multibanners/banner';
+  }
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-flexgrid_block') {
+    $variables['#attached']['library'][] = 'multibanners/flexgrid';
+  }
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-video_block') {
+    $variables['#attached']['library'][] = 'multibanners/video';
   }
 }
 
@@ -41,4 +47,13 @@ function multibanners_theme() {
       'template' => 'banner',
     ),
   );
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function multibanners_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $banner_count_class = count($view->result);
+  $variables['attributes']['class'][] = 'banner-count-'. $banner_count_class;
 }

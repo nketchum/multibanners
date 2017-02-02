@@ -65,13 +65,10 @@ display:
       row:
         type: 'entity:banner'
       fields:
-        name:
-          table: banner_field_data
-          field: name
-          id: name
-          entity_type: null
-          entity_field: name
-          plugin_id: field
+        counter:
+          id: counter
+          table: views
+          field: counter
           relationship: none
           group_type: group
           admin_label: ''
@@ -108,7 +105,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -116,33 +113,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          counter_start: 1
+          plugin_id: counter
       filters: {  }
-      sorts:
-        delta:
-          id: delta
-          table: node__field_banner_refs
-          field: delta
-          relationship: reverse__node__field_banner_refs
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
+      sorts: {  }
       title: 'Featured Content'
       header: {  }
       footer: {  }
@@ -197,10 +171,10 @@ display:
           plugin_id: node_nid
       display_extenders: {  }
       css_class: multibanner
+      show_admin_links: false
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
@@ -269,11 +243,15 @@ display:
           1: AND
       css_class: 'multibanner multibanner-banner'
       style:
-        type: default
+        type: html_list
         options:
-          row_class: 'banner-wrapper banner-banner'
-          default_row_class: true
-          uses_fields: false
+          grouping: {  }
+          row_class: 'banner-wrapper banner-banner banner-num-{{ counter }}'
+          default_row_class: false
+          uses_fields: true
+          type: ul
+          wrapper_class: slider-wrapper
+          class: slider
       row:
         type: 'entity:banner'
         options:
@@ -282,7 +260,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
@@ -352,9 +329,10 @@ display:
       style:
         type: default
         options:
-          row_class: 'banner-wrapper banner-flexgrid'
-          default_row_class: true
-          uses_fields: false
+          grouping: {  }
+          row_class: 'banner-wrapper banner-flexgrid banner-num-{{ counter }}'
+          default_row_class: false
+          uses_fields: true
       row:
         type: 'entity:banner'
         options:
@@ -363,7 +341,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
@@ -433,9 +410,10 @@ display:
       style:
         type: default
         options:
-          row_class: 'banner-wrapper banner-video'
-          default_row_class: true
-          uses_fields: false
+          grouping: {  }
+          row_class: 'banner-wrapper banner-video banner-num-{{ counter }}'
+          default_row_class: false
+          uses_fields: true
       row:
         type: 'entity:banner'
         options:
@@ -444,7 +422,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions

@@ -1,10 +1,9 @@
 /**
- * Iniatiates a slideshow banner type.
+ * Iniatiate sliding banner.
  */
 (function ($, Drupal) {
-
   $(function() {
-    $('.unslider-wrapper').unslider({
+    $('.slider-wrapper').unslider({
       animation: 'horizontal',
       arrows: true,
       autoplay: false,
@@ -14,5 +13,4 @@
       speed: 500
     })
   });
-
 })(window.jQuery, window.Drupal, window.drupalSettings);

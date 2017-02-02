@@ -1,4 +1,4 @@
-/* Unslider */
+/* Multibanner sliding banners */
 
 .unslider {
   position: relative;
@@ -47,33 +47,4 @@
 
 .unslider-nav ol li.unslider-active {
   background: #333;
-}
-
-/* Multibanners */
-
-.banner-wrapper img {
-  height: auto;
-  max-width: 100%;
-}
-
-.banner-wrapper {
-  position: relative;
-}
-
-.banner-wrapper .banner-content {
-  background-color: #333;
-  bottom: 0;
-  color: #fff;
-  padding: 2em 4em;
-  position: absolute;
-  right: 0;
-  z-index: 10;
-}
-
-/* Fields */
-
-.banner-wrapper .banner-content .field--name-name {
-  font-size: 2em;
-  font-weight: bold;
-  text-transform: uppercase;
 }
