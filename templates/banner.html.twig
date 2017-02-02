@@ -1,0 +1,13 @@
+<div{{ attributes.addClass('banner') }}>
+  {% if content.field_banner_image %}
+    {{ content.field_banner_image }}
+  {% endif %}
+  <div class="banner-content">
+    {% if content.user_id %}
+      {{ content.user_id }}
+    {% endif %}
+    {% if content.name %}
+      {{ content.name }}
+    {% endif %}
+  </div>
+</div>

@@ -26,3 +26,13 @@ function multibanners_preprocess_block(&$variables) {
     $variables['#attached']['library'][] = 'multibanners/unslider';
   }
 }
+
+function multibanners_theme() {
+  return array(
+    'banner' => array(
+      'file' => 'banner.page.inc',
+      'render element' => 'elements',
+      'template' => 'banner',
+    ),
+  );
+}
