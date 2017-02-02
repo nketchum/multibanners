@@ -3,12 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.banner.banner.field_banner_image
+    - image.style.large
   module:
     - featured_banners
     - image
     - user
-_core:
-  default_config_hash: yA491Tnn2wicPqq7Gx8gPEf-lr1Y4zyqoFx_-gUTvWY
 id: banner.banner.default
 targetEntityType: banner
 bundle: banner
@@ -18,7 +17,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
