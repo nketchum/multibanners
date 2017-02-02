@@ -21,7 +21,7 @@ class BannerSettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'Banner_settings';
+    return 'banner_settings';
   }
 
   /**
@@ -48,7 +48,7 @@ class BannerSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['Banner_settings']['#markup'] = 'Settings form for Banner entities. Manage field settings here.';
+    $form['banner_settings']['#markup'] = '<p>Settings form for Banner entities. Manage field settings here.</p>';
     return $form;
   }
 

@@ -1,7 +1,0 @@
-featured_banners.banner_controller_types:
-  path: '/admin/structure/banners/types'
-  defaults:
-    _controller: '\Drupal\featured_banners\Controller\BannerController::types'
-    _title: 'Enabled node types'
-  requirements:
-    _permission: 'administer banner entities'

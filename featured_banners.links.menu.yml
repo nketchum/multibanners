@@ -3,9 +3,3 @@ banner.admin.structure.settings:
   description: 'Configure banner entities'
   route_name: banner.settings
   parent: system.admin_structure
-
-banner.admin.structure.types:
-  title: Manage content types
-  description: 'Manage banner-enabled content types'
-  route_name: featured_banners.banner_controller_types
-  parent: banner.admin.structure.settings
