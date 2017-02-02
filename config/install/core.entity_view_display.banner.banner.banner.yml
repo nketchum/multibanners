@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.banner.banner
     - field.field.banner.banner.field_banner_image
-    - image.style.large
+    - image.style.banner_large
   module:
     - image
     - multibanners
@@ -17,7 +17,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
+      image_style: banner_large
       image_link: ''
     third_party_settings: {  }
     type: image

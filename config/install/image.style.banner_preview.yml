@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: banner_preview
+label: 'Banner preview'
+effects:
+  61676bd2-d276-4d46-b718-ac9aebff82c8:
+    uuid: 61676bd2-d276-4d46-b718-ac9aebff82c8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200

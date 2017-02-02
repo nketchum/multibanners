@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: banner_large
+label: 'Banner large'
+effects:
+  61d00f14-f43b-44eb-a8ba-b9596935b5e6:
+    uuid: 61d00f14-f43b-44eb-a8ba-b9596935b5e6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1800
+      height: 1800
