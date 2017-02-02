@@ -224,9 +224,10 @@ display:
           relationship: reverse__node__field_banner_refs
           group_type: group
           admin_label: ''
-          operator: or
+          operator: not
           value:
-            banner: banner
+            flex_grid: flex_grid
+            video_grid: video_grid
           group: 1
           exposed: false
           expose:
@@ -278,73 +279,6 @@ display:
         options:
           relationship: none
           view_mode: banner
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - user.permissions
-      tags: {  }
-  default_block:
-    display_plugin: block
-    id: default_block
-    display_title: 'Default block'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_category: Multibanners
-      block_hide_empty: true
-      block_description: 'Multibanner: Default'
-      css_class: 'multibanner multibanner-default'
-      defaults:
-        css_class: false
-        filters: false
-        filter_groups: false
-      filters:
-        field_banner_type_value:
-          id: field_banner_type_value
-          table: node__field_banner_type
-          field: field_banner_type_value
-          relationship: reverse__node__field_banner_refs
-          group_type: group
-          admin_label: ''
-          operator: empty
-          value: {  }
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:

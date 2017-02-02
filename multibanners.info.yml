@@ -4,5 +4,8 @@ description: Customizable and client-configurable banner content type entity and
 core: 8.x
 package: Custom
 dependencies:
+  - file
   - focal_point
+  - image
+  - options
   - views
