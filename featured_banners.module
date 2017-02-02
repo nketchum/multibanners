@@ -31,5 +31,11 @@ function featured_banners_theme() {
       'render element' => 'elements',
       'template' => 'banner',
     ),
+    'field__banner__name' => array(
+      'base hook' => 'field',
+    ),
+    'field__banner__field_banner_image' => array(
+      'base hook' => 'field',
+    ),
   );
 }
