@@ -21,12 +21,18 @@ function multibanners_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_preprocess_block().
+ */
 function multibanners_preprocess_block(&$variables) {
-  if ($variables['elements']['#id'] === 'views_block__multibanners_banner_block') {
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-banner_block') {
     $variables['#attached']['library'][] = 'multibanners/unslider';
   }
 }
 
+/**
+ * Implements hook_theme().
+ */
 function multibanners_theme() {
   return array(
     'banner' => array(

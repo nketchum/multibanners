@@ -1,10 +1,10 @@
-add banner entities:
-  title: 'Create new banners'
-
 administer banner entities:
   title: 'Administer banners'
   description: 'Allow to access the administration form to configure banners.'
   restrict access: true
+
+add banner entities:
+  title: 'Create new banners'
 
 delete banner entities:
   title: 'Delete banners'
