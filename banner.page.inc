@@ -21,12 +21,6 @@ use Drupal\Core\Render\Element;
  *   - image: The path to the banner background image.
  */
 function template_preprocess_banner(&$variables) {
-  // $variables['title'] = $variables['elements']['#banner']->getName();
-  // if (count($img = $variables['elements']['#banner']->get('field_banner_image')->getValue())) {
-  //   $fs = \Drupal::entityManager()->getStorage('file');
-  //   $file = $fs->load($img[0]['target_id']);
-  //   $variables['image'] = '<img src="'. $file->url() .'">';;
-  // }
 
   // Render elements using core's display system.
   foreach (Element::children($variables['elements']) as $key) {
