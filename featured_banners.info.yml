@@ -1,0 +1,7 @@
+name: Featured banners
+type: module
+description: Customizable and client-configurable banner content type entity and associated fields.
+core: 8.x
+package: Custom
+dependencies:
+  - focal_point

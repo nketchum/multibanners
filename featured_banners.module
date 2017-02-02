@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains featured_banners.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function featured_banners_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the featured_banners module.
+    case 'help.page.featured_banners':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Customizable and client-configurable banner content type entity and associated fields.') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function featured_banners_theme() {
+  return array(
+    'banner' => array(
+      'file' => 'banner.page.inc',
+      'render element' => 'elements',
+      'template' => 'banner',
+    ),
+  );
+}

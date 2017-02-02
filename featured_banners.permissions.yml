@@ -1,0 +1,22 @@
+add banner entities:
+  title: 'Create new Banner entities'
+
+administer banner entities:
+  title: 'Administer Banner entities'
+  description: 'Allow to access the administration form to configure Banner entities.'
+  restrict access: true
+
+delete banner entities:
+  title: 'Delete Banner entities'
+
+edit banner entities:
+  title: 'Edit Banner entities'
+
+access banner overview:
+  title: 'Access the Banner overview page'
+
+view published banner entities:
+  title: 'View published Banner entities'
+
+view unpublished banner entities:
+  title: 'View unpublished Banner entities'
