@@ -73,8 +73,8 @@ class BannerBlock extends BlockBase {
         $value .= $node->id();
         $value .= ' ';
         $value .= $node->getType();
-        $value .= ' ';
-        $value .= $node->get('field_test_str')->value;
+        // $value .= ' ';
+        // $value .= $node->get('field_test_str')->value;
       }
     }
     return array(
