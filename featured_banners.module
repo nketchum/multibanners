@@ -12,7 +12,6 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function featured_banners_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the featured_banners module.
     case 'help.page.featured_banners':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
