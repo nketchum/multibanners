@@ -1,50 +1,51 @@
-/* Multibanner sliding banners */
-
+/* line 5, scss/banner.scss */
 .unslider {
   position: relative;
 }
-
-.unslider-arrow {
-  background: #333;
+/* line 8, scss/banner.scss */
+.unslider .unslider-arrow {
+  background: #343434;
   bottom: 50%;
-  color: #fff;
+  color: #fefefe;
   font-size: 0.75em;
   letter-spacing: 0.15em;
   padding: 1.5em;
   text-transform: uppercase;
   z-index: 20;
 }
-
-.unslider-arrow:hover {
-  background: #eee;
-}
-
-.unslider-arrow.prev {
+/* line 18, scss/banner.scss */
+.unslider .unslider-arrow.prev {
   left: 0;
 }
-
-.unslider-arrow.next {
+/* line 22, scss/banner.scss */
+.unslider .unslider-arrow.next {
   right: 0;
 }
-
-.unslider-nav {
+/* line 26, scss/banner.scss */
+.unslider .unslider-arrow:hover {
+  background: #fefefe;
+  color: #343434;
+}
+/* line 32, scss/banner.scss */
+.unslider .unslider-nav {
   bottom: 0;
   position: absolute;
   text-align: center;
   width: 100%;
 }
-.unslider-nav ol {
-  background: #eee;
+/* line 38, scss/banner.scss */
+.unslider .unslider-nav ol {
+  background: #fefefe;
   display: inline-block;
   padding: 1em;
   position: relative;
   z-index: 20;
 }
-
-.unslider-nav ol li {
-  border-color: #333;
+/* line 45, scss/banner.scss */
+.unslider .unslider-nav ol li {
+  border-color: #343434;
 }
-
-.unslider-nav ol li.unslider-active {
-  background: #333;
+/* line 48, scss/banner.scss */
+.unslider .unslider-nav ol li.unslider-active {
+  background: #343434;
 }

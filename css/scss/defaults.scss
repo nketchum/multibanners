@@ -1,0 +1,46 @@
+// Defaults for all banners
+
+@import "breakpoint";
+@import "variables";
+
+.multibanner {
+  overflow: hidden;
+
+  .banner-wrapper {
+    position: relative;
+
+    img {
+      height: auto;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    .banner-content {
+      background-color: #333;
+      bottom: 0;
+      color: $lightest;
+      padding: 2em 4em;
+      position: absolute;
+      right: 0;
+      z-index: 10;
+
+      @include breakpoint(max-width 960px) {
+        padding: 1em 2em;
+      }
+
+      .field--name-name {
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include breakpoint(max-width 960px) {
+          font-size: 1.75em;
+        }
+
+      }
+
+    }
+
+  }
+
+}
