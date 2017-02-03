@@ -4,10 +4,11 @@ dependencies: {  }
 name: banner_preview
 label: 'Banner preview'
 effects:
-  61676bd2-d276-4d46-b718-ac9aebff82c8:
-    uuid: 61676bd2-d276-4d46-b718-ac9aebff82c8
-    id: image_scale_and_crop
-    weight: 1
+  8f62efde-7953-4171-8b9f-8bef14c67cfb:
+    uuid: 8f62efde-7953-4171-8b9f-8bef14c67cfb
+    id: image_scale
+    weight: 2
     data:
       width: 300
-      height: 200
+      height: null
+      upscale: false
