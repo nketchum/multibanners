@@ -4,7 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.banner.video
     - field.field.banner.banner.field_banner_image
-    - image.style.thumbnail
+    - field.field.banner.banner.field_banner_teaser
+    - image.style.medium
   module:
     - image
     - multibanners
@@ -14,13 +15,20 @@ bundle: banner
 mode: video
 content:
   field_banner_image:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_banner_teaser:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   name:
     label: hidden
     type: string

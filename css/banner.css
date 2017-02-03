@@ -49,3 +49,8 @@
 .unslider .unslider-nav ol li.unslider-active {
   background: #343434;
 }
+
+/* line 61, scss/banner.scss */
+.banner-wrapper.banner-banner .banner-content {
+  text-align: right;
+}

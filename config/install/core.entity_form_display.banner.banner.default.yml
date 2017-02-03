@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.banner.banner.field_banner_image
+    - field.field.banner.banner.field_banner_teaser
     - image.style.banner_preview
   module:
     - image
@@ -19,6 +20,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_image
+  field_banner_teaser:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   name:
     type: string_textfield
     weight: 0

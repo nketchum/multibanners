@@ -14,7 +14,7 @@
 }
 /* line 18, scss/defaults.scss */
 .multibanner .banner-wrapper .banner-content {
-  background-color: #333;
+  background: rgba(52, 52, 52, 0.5);
   bottom: 0;
   color: #fefefe;
   padding: 2em 4em;
