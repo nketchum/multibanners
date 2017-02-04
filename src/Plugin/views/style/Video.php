@@ -6,19 +6,19 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
 
 /**
- * Style plugin to render each item in an ordered or unordered list.
+ * Style plugin to render each item in a video banner.
  *
  * @ingroup views_style_plugins
  *
  * @ViewsStyle(
- *   id = "multibanner",
- *   title = @Translation("Multibanner"),
- *   help = @Translation("Displays rows as a multibanner."),
- *   theme = "views_view_multibanner",
+ *   id = "video",
+ *   title = @Translation("Video"),
+ *   help = @Translation("Displays rows as a video banner."),
+ *   theme = "views_view_video",
  *   display_types = {"normal"}
  * )
  */
-class Multibanner extends StylePluginBase {
+class Video extends StylePluginBase {
 
   /**
    * Does the style plugin allows to use style plugins.

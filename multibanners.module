@@ -46,10 +46,20 @@ function multibanners_theme() {
       'render element' => 'elements',
       'template' => 'banner',
     ),
-    'views_view_multibanner' => array(
+    'views_view_banner' => array(
       'file' => 'multibanners.theme.inc',
       'render element' => 'elements',
-      'template' => 'views_view_multibanner',
+      'template' => 'views_view_banner',
+    ),
+    'views_view_flex' => array(
+      'file' => 'multibanners.theme.inc',
+      'render element' => 'elements',
+      'template' => 'views_view_flex',
+    ),
+    'views_view_video' => array(
+      'file' => 'multibanners.theme.inc',
+      'render element' => 'elements',
+      'template' => 'views_view_video',
     ),
   );
 }
@@ -75,7 +85,7 @@ function multibanners_field_widget_form_alter(&$element, \Drupal\Core\Form\FormS
     if ($element['entities']['#entity_type'] === 'banner') {
       // Banner entities are stored in numeric keys, alongside other associative keys
       $i = 0;
-      foreach  ($element['entities'] as $key => $value) {
+      foreach ($element['entities'] as $key => $value) {
         if (is_numeric($key))
           $i++;
       }
