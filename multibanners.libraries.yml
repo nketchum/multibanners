@@ -15,12 +15,12 @@ banner:
     - core/jquery
     - core/jquery.once
 
-flexgrid:
+flex:
   version: VERSION
   css:
     theme:
       css/defaults.css: {}
-      css/flexgrid.css: {}
+      css/flex.css: {}
 
 video:
   version: VERSION

@@ -2,33 +2,33 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.banner.flexgrid
+    - core.entity_view_mode.banner.flex
     - field.field.banner.banner.field_banner_image
     - field.field.banner.banner.field_banner_teaser
-    - image.style.medium
+    - image.style.multibanners_flex
   module:
     - image
     - multibanners
-id: banner.banner.flexgrid
+id: banner.banner.flex
 targetEntityType: banner
 bundle: banner
-mode: flexgrid
+mode: flex
 content:
   field_banner_image:
     weight: 2
     label: hidden
     settings:
-      image_style: medium
+      image_style: multibanners_flex
       image_link: ''
     third_party_settings: {  }
     type: image
   field_banner_teaser:
-    type: string
     weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    type: string
   name:
     label: hidden
     type: string

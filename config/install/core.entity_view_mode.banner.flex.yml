@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - multibanners
-id: banner.flexgrid
-label: Flexgrid
+id: banner.flex
+label: Flex
 targetEntityType: banner
 cache: true

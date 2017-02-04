@@ -3,11 +3,11 @@ status: true
 dependencies:
   module:
     - focal_point
-name: banner_large
-label: 'Banner large'
+name: multibanners_banner
+label: 'Multibanners banner'
 effects:
-  61d00f14-f43b-44eb-a8ba-b9596935b5e6:
-    uuid: 61d00f14-f43b-44eb-a8ba-b9596935b5e6
+  47114f80-31cf-4fab-9e0f-d8300feef205:
+    uuid: 47114f80-31cf-4fab-9e0f-d8300feef205
     id: focal_point_scale_and_crop
     weight: 1
     data:

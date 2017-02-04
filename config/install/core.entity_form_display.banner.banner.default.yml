@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.banner.banner.field_banner_image
     - field.field.banner.banner.field_banner_teaser
-    - image.style.banner_preview
+    - image.style.multibanners_preview
   module:
     - image
     - multibanners
@@ -16,7 +16,7 @@ content:
   field_banner_image:
     weight: 1
     settings:
-      preview_image_style: banner_preview
+      preview_image_style: multibanners_preview
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_image

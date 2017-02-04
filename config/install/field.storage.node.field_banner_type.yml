@@ -15,11 +15,11 @@ settings:
       value: banner
       label: 'Large banner'
     -
-      value: flex_grid
-      label: 'Flexible grid'
+      value: flex
+      label: 'Flexible'
     -
-      value: video_grid
-      label: 'Video grid'
+      value: video
+      label: 'Video'
   allowed_values_function: ''
 module: options
 locked: false

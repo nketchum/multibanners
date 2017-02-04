@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.banner.banner.field_banner_image
     - field.field.banner.banner.field_banner_teaser
-    - image.style.banner_large
+    - image.style.multibanners_banner
   module:
     - image
     - multibanners
@@ -18,7 +18,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      image_style: banner_large
+      image_style: multibanners_banner
       image_link: ''
     third_party_settings: {  }
     type: image

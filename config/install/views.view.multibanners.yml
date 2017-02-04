@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.banner.banner
-    - core.entity_view_mode.banner.flexgrid
+    - core.entity_view_mode.banner.flex
     - core.entity_view_mode.banner.video
   module:
     - multibanners
@@ -200,8 +200,8 @@ display:
           admin_label: ''
           operator: not
           value:
-            flex_grid: flex_grid
-            video_grid: video_grid
+            flex: flex
+            video: video
           group: 1
           exposed: false
           expose:
@@ -243,13 +243,12 @@ display:
           1: AND
       css_class: 'multibanner multibanner-banner'
       style:
-        type: html_list
+        type: banner
         options:
           grouping: {  }
           row_class: 'banner-wrapper banner-banner banner-num-{{ counter }}'
           default_row_class: false
           uses_fields: true
-          type: ul
           wrapper_class: slider-wrapper
           class: slider
       row:
@@ -264,17 +263,17 @@ display:
         - url
         - user.permissions
       tags: {  }
-  flexgrid_block:
+  flex_block:
     display_plugin: block
-    id: flexgrid_block
-    display_title: 'Flexgrid block'
+    id: flex_block
+    display_title: 'Flex block'
     position: 3
     display_options:
       display_extenders: {  }
       display_description: ''
       block_category: Multibanners
       block_hide_empty: true
-      block_description: 'Multibanner: Flexible grid'
+      block_description: 'Multibanner: Flexible'
       filters:
         field_banner_type_value:
           id: field_banner_type_value
@@ -285,7 +284,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            flex_grid: flex_grid
+            flex: flex
           group: 1
           exposed: false
           expose:
@@ -325,19 +324,21 @@ display:
         operator: AND
         groups:
           1: AND
-      css_class: 'multibanner multibanner-flexgrid'
+      css_class: 'multibanner multibanner-flex'
       style:
-        type: default
+        type: flex
         options:
           grouping: {  }
-          row_class: 'banner-wrapper banner-flexgrid banner-num-{{ counter }}'
+          row_class: 'banner-wrapper banner-flex banner-num-{{ counter }}'
           default_row_class: false
           uses_fields: true
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:banner'
         options:
           relationship: none
-          view_mode: flexgrid
+          view_mode: flex
     cache_metadata:
       max-age: -1
       contexts:
@@ -355,7 +356,7 @@ display:
       display_description: ''
       block_category: Multibanners
       block_hide_empty: true
-      block_description: 'Multibanner: Video grid'
+      block_description: 'Multibanner: Video'
       filters:
         field_banner_type_value:
           id: field_banner_type_value
@@ -366,7 +367,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            video_grid: video_grid
+            video: video
           group: 1
           exposed: false
           expose:
@@ -408,12 +409,14 @@ display:
           1: AND
       css_class: 'multibanner multibanner-video'
       style:
-        type: default
+        type: video
         options:
           grouping: {  }
           row_class: 'banner-wrapper banner-video banner-num-{{ counter }}'
           default_row_class: false
           uses_fields: true
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:banner'
         options:

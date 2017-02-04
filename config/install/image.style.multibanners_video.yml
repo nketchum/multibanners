@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: multibanners_video
+label: 'Multibanners video'
+effects:
+  cff995bf-badc-4153-b1ba-43a4c40d8c62:
+    uuid: cff995bf-badc-4153-b1ba-43a4c40d8c62
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 150

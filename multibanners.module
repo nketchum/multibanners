@@ -25,13 +25,13 @@ function multibanners_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_preprocess_block().
  */
 function multibanners_preprocess_block(&$variables) {
-  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-banner_block') {
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-banner') {
     $variables['#attached']['library'][] = 'multibanners/banner';
   }
-  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-flexgrid_block') {
-    $variables['#attached']['library'][] = 'multibanners/flexgrid';
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-flex') {
+    $variables['#attached']['library'][] = 'multibanners/flex';
   }
-  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-video_block') {
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-video') {
     $variables['#attached']['library'][] = 'multibanners/video';
   }
 }
@@ -51,16 +51,6 @@ function multibanners_theme() {
       'render element' => 'elements',
       'template' => 'views_view_banner',
     ),
-    'views_view_flex' => array(
-      'file' => 'multibanners.theme.inc',
-      'render element' => 'elements',
-      'template' => 'views_view_flex',
-    ),
-    'views_view_video' => array(
-      'file' => 'multibanners.theme.inc',
-      'render element' => 'elements',
-      'template' => 'views_view_video',
-    ),
   );
 }
 
@@ -68,12 +58,8 @@ function multibanners_theme() {
  * Implements hook_preprocess_views_view().
  */
 function multibanners_preprocess_views_view(&$variables) {
-  // $id = $variables['id'];
-  // $plugin_id = $variables['plugin_id'];
   if ($variables['id'] === 'multibanners') {
-    $view = $variables['view'];
-    $banner_count_class = count($view->result);
-    $variables['attributes']['class'][] = 'banner-count-'. $banner_count_class;
+    $variables['attributes']['class'][] = 'banner-count-'. count($variables['view']->result);
   }
 }
 
@@ -83,16 +69,20 @@ function multibanners_preprocess_views_view(&$variables) {
 function multibanners_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
   if (array_key_exists('entities', $element)) {
     if ($element['entities']['#entity_type'] === 'banner') {
-      // Banner entities are stored in numeric keys, alongside other associative keys
-      $i = 0;
+      // Hide "add" buttons when after the ninth banner is added.
+      $num_entities = 0;
       foreach ($element['entities'] as $key => $value) {
-        if (is_numeric($key))
-          $i++;
+        if (is_numeric($key)) {
+          $num_entities++;
+        }
       }
-      // Hide add buttons when limit of 9 is reached.
-      if ($i >= 9) {
+      if ($num_entities >= 9) {
         $element['actions']['ief_add']['#access'] = FALSE;
         $element['actions']['ief_add_existing']['#access'] = FALSE;
+        $element['#description'] = t('<p><em>You may add <strong style="color:orange;">0 additional banner(s)</strong>. You have reached the limit of 9.</em></p>');
+      } else {
+        $left = (string) 9 - $num_entities;
+        $element['#description'] = t('<p><em>You may add up to <strong style="color:green;">'. $left .' additional banner(s)</strong>. A total of 9 is allowed.</em></p>');
       }
     }
   }

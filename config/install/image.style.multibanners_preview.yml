@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: multibanners_preview
+label: 'Multibanners preview'
+effects:
+  e1c2ba6b-3073-4fed-a3f3-7f13bf667f1e:
+    uuid: e1c2ba6b-3073-4fed-a3f3-7f13bf667f1e
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

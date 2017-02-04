@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: multibanners_flex
+label: 'Multibanners flex'
+effects:
+  f2eeb593-09b1-4732-af8b-435dadfb9254:
+    uuid: f2eeb593-09b1-4732-af8b-435dadfb9254
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400

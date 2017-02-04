@@ -1,0 +1,20 @@
+/* line 8, scss/flex.scss */
+.multibanner-flex .banner-wrapper {
+  float: left;
+}
+/* line 12, scss/flex.scss */
+.multibanner-flex.banner-count-9 .banner-wrapper {
+  width: 33.33333%;
+}
+@media (max-width: 960px) {
+  /* line 12, scss/flex.scss */
+  .multibanner-flex.banner-count-9 .banner-wrapper {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 12, scss/flex.scss */
+  .multibanner-flex.banner-count-9 .banner-wrapper {
+    width: 100%;
+  }
+}
