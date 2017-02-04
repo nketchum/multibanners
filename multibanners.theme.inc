@@ -31,6 +31,14 @@ function template_preprocess_banner(&$variables) {
  *   - view: A View object.
  */
 function template_preprocess_views_view_banner(&$variables) {
+
+  $banner_type = 'banner';
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($node->hasField('field_banner_type')) {
+      $banner_type = $node->get('field_banner_type')->getValue()[0]['value'];
+    }
+  }
+
   $handler  = $variables['view']->style_plugin;
   // Fetch classes from handler options.
   if ($handler->options['class']) {
@@ -44,18 +52,11 @@ function template_preprocess_views_view_banner(&$variables) {
     $wrapper_class = explode(' ', $handler->options['wrapper_class']);
     $variables['attributes']['class'] = array_map('\Drupal\Component\Utility\Html::cleanCssIdentifier', $wrapper_class);
   }
+  $variables['attributes']['class'][] = 'multibanner-'. $banner_type;
   $view = $variables['view'];
   $rows = $variables['rows'];
   $style = $view->style_plugin;
   $options = $style->options;
 
-  $variables['default_row_class'] = !empty($options['default_row_class']);
-  foreach ($rows as $id => $row) {
-    $variables['rows'][$id] = array();
-    $variables['rows'][$id]['content'] = $row;
-    $variables['rows'][$id]['attributes'] = new Attribute();
-    if ($row_class = $view->style_plugin->getRowClass($id)) {
-      $variables['rows'][$id]['attributes']->addClass($row_class);
-    }
-  }
+  template_preprocess_views_view_unformatted($variables);
 }
