@@ -57,11 +57,13 @@ display:
           items_per_page: 9
           offset: 0
       style:
-        type: default
+        type: multibanner
         options:
-          row_class: banner-wrapper
-          default_row_class: true
-          uses_fields: false
+          row_class: 'banner-wrapper banner-count-{{ counter }}'
+          default_row_class: false
+          uses_fields: true
+          wrapper_class: ''
+          class: ''
       row:
         type: 'entity:banner'
       fields:
@@ -170,7 +172,7 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
-      css_class: multibanner
+      css_class: ''
       show_admin_links: false
     cache_metadata:
       max-age: -1
@@ -179,9 +181,9 @@ display:
         - url
         - user.permissions
       tags: {  }
-  banner_block:
+  banner:
     display_plugin: block
-    id: banner_block
+    id: banner
     display_title: 'Banner block'
     position: 2
     display_options:
@@ -234,19 +236,18 @@ display:
       defaults:
         filters: false
         filter_groups: false
-        css_class: false
+        css_class: true
         style: false
         row: false
       filter_groups:
         operator: AND
         groups:
           1: AND
-      css_class: 'multibanner multibanner-banner'
       style:
-        type: banner
+        type: multibanner
         options:
           grouping: {  }
-          row_class: 'banner-wrapper banner-banner banner-num-{{ counter }}'
+          row_class: 'banner-wrapper banner-num-{{ counter }}'
           default_row_class: false
           uses_fields: true
           wrapper_class: slider-wrapper
@@ -263,17 +264,17 @@ display:
         - url
         - user.permissions
       tags: {  }
-  flex_block:
+  flex:
     display_plugin: block
-    id: flex_block
-    display_title: 'Flex block'
+    id: flex
+    display_title: Flex
     position: 3
     display_options:
       display_extenders: {  }
       display_description: ''
       block_category: Multibanners
       block_hide_empty: true
-      block_description: 'Multibanner: Flexible'
+      block_description: 'Multibanner: Flex'
       filters:
         field_banner_type_value:
           id: field_banner_type_value
@@ -317,22 +318,21 @@ display:
       defaults:
         filters: false
         filter_groups: false
-        css_class: false
+        css_class: true
         style: false
         row: false
       filter_groups:
         operator: AND
         groups:
           1: AND
-      css_class: 'multibanner multibanner-flex'
       style:
-        type: flex
+        type: multibanner
         options:
           grouping: {  }
-          row_class: 'banner-wrapper banner-flex banner-num-{{ counter }}'
+          row_class: 'banner-wrapper banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
-          wrapper_class: item-list
+          wrapper_class: ''
           class: ''
       row:
         type: 'entity:banner'
@@ -346,9 +346,9 @@ display:
         - url
         - user.permissions
       tags: {  }
-  video_block:
+  video:
     display_plugin: block
-    id: video_block
+    id: video
     display_title: 'Video block'
     position: 4
     display_options:
@@ -400,22 +400,20 @@ display:
       defaults:
         filters: false
         filter_groups: false
-        css_class: false
+        css_class: true
         style: false
         row: false
       filter_groups:
         operator: AND
         groups:
           1: AND
-      css_class: 'multibanner multibanner-video'
       style:
-        type: video
+        type: multibanner
         options:
-          grouping: {  }
-          row_class: 'banner-wrapper banner-video banner-num-{{ counter }}'
+          row_class: 'banner-wrapper banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
-          wrapper_class: item-list
+          wrapper_class: ''
           class: ''
       row:
         type: 'entity:banner'

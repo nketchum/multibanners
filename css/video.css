@@ -1,20 +1,20 @@
 /* line 8, scss/video.scss */
-.multibanner-video .banner-wrapper {
+.view-multibanners .multibanner-video .banner-wrapper {
   float: left;
 }
 /* line 12, scss/video.scss */
-.multibanner-video.banner-count-9 .banner-wrapper {
+.view-multibanners.banner-count-9 .banner-wrapper {
   width: 33.33333%;
 }
 @media (max-width: 960px) {
   /* line 12, scss/video.scss */
-  .multibanner-video.banner-count-9 .banner-wrapper {
+  .view-multibanners.banner-count-9 .banner-wrapper {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
   /* line 12, scss/video.scss */
-  .multibanner-video.banner-count-9 .banner-wrapper {
+  .view-multibanners.banner-count-9 .banner-wrapper {
     width: 100%;
   }
 }

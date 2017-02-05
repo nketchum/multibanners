@@ -22,23 +22,15 @@ function template_preprocess_banner(&$variables) {
 }
 
 /**
- * Prepares variables for views multibanner banner templates.
+ * Prepares variables for views multibanner templates.
  *
- * Default template: views-view-banner.html.twig.
+ * Default template: views-view-multibanner.html.twig.
  *
  * @param array $variables
  *   An associative array containing:
  *   - view: A View object.
  */
-function template_preprocess_views_view_banner(&$variables) {
-
-  $banner_type = 'banner';
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if ($node->hasField('field_banner_type')) {
-      $banner_type = $node->get('field_banner_type')->getValue()[0]['value'];
-    }
-  }
-
+function template_preprocess_views_view_multibanner(&$variables) {
   $handler  = $variables['view']->style_plugin;
   // Fetch classes from handler options.
   if ($handler->options['class']) {
@@ -52,11 +44,22 @@ function template_preprocess_views_view_banner(&$variables) {
     $wrapper_class = explode(' ', $handler->options['wrapper_class']);
     $variables['attributes']['class'] = array_map('\Drupal\Component\Utility\Html::cleanCssIdentifier', $wrapper_class);
   }
+  // Set banner classes if set on host node.
+  $banner_type = 'banner';
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($node->hasField('field_banner_type')) {
+      if (count($node->get('field_banner_type')->getValue())) {
+        $banner_type = $node->get('field_banner_type')->getValue()[0]['value'];
+      }
+    }
+  }
+  // Set banner type class.
   $variables['attributes']['class'][] = 'multibanner-'. $banner_type;
-  $view = $variables['view'];
-  $rows = $variables['rows'];
-  $style = $view->style_plugin;
-  $options = $style->options;
-
+  // Set extra type classes.
+  if ($banner_type === 'banner') {
+    $variables['attributes']['class'][] = 'slider-wrapper';
+    $variables['list']['attributes'] = new Attribute(array('class' => 'slider'));
+  }
+  // Finish rendering.
   template_preprocess_views_view_unformatted($variables);
 }

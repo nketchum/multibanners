@@ -11,14 +11,14 @@ use Drupal\views\Plugin\views\style\StylePluginBase;
  * @ingroup views_style_plugins
  *
  * @ViewsStyle(
- *   id = "banner",
- *   title = @Translation("Banner"),
- *   help = @Translation("Displays rows as a banner."),
- *   theme = "views_view_banner",
+ *   id = "multibanner",
+ *   title = @Translation("Multibanner"),
+ *   help = @Translation("Displays rows in a multibanner."),
+ *   theme = "views_view_multibanner",
  *   display_types = {"normal"}
  * )
  */
-class Banner extends StylePluginBase {
+class Multibanner extends StylePluginBase {
 
   /**
    * Does the style plugin allows to use style plugins.
@@ -40,7 +40,7 @@ class Banner extends StylePluginBase {
   protected function defineOptions() {
     $options = parent::defineOptions();
     $options['class'] = array('default' => '');
-    $options['wrapper_class'] = array('default' => 'item-list');
+    $options['wrapper_class'] = array('default' => '');
     return $options;
   }
 
@@ -51,7 +51,7 @@ class Banner extends StylePluginBase {
     parent::buildOptionsForm($form, $form_state);
     $form['wrapper_class'] = array(
       '#title' => $this->t('Wrapper class'),
-      '#description' => $this->t('The class to provide on the wrapper, outside the list.'),
+      '#description' => $this->t('The class to provide on the list element wrapper.'),
       '#type' => 'textfield',
       '#size' => '30',
       '#default_value' => $this->options['wrapper_class'],

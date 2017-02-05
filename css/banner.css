@@ -50,7 +50,7 @@
   background: #343434;
 }
 
-/* line 61, scss/banner.scss */
-.banner-wrapper.banner-banner .banner-content {
+/* line 62, scss/banner.scss */
+.banner-wrapper .banner-banner .banner-content {
   text-align: right;
 }

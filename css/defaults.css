@@ -1,25 +1,26 @@
 /* line 6, scss/defaults.scss */
-.multibanner {
+.view-multibanners {
   overflow: hidden;
 }
 /* line 9, scss/defaults.scss */
-.multibanner ul, .multibanner ol {
+.view-multibanners ul, .view-multibanners ol {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
-/* line 14, scss/defaults.scss */
-.multibanner .banner-wrapper {
+/* line 15, scss/defaults.scss */
+.view-multibanners .banner-wrapper {
   overflow: hidden;
   position: relative;
 }
-/* line 18, scss/defaults.scss */
-.multibanner .banner-wrapper img {
+/* line 19, scss/defaults.scss */
+.view-multibanners .banner-wrapper img {
   height: auto;
   max-width: 100%;
   min-width: 100%;
 }
-/* line 24, scss/defaults.scss */
-.multibanner .banner-wrapper .banner-content {
+/* line 25, scss/defaults.scss */
+.view-multibanners .banner-wrapper .banner-content {
   background: rgba(52, 52, 52, 0.5);
   bottom: 0;
   color: #fefefe;
@@ -29,20 +30,20 @@
   z-index: 10;
 }
 @media (max-width: 960px) {
-  /* line 24, scss/defaults.scss */
-  .multibanner .banner-wrapper .banner-content {
+  /* line 25, scss/defaults.scss */
+  .view-multibanners .banner-wrapper .banner-content {
     padding: 1em 2em;
   }
 }
-/* line 37, scss/defaults.scss */
-.multibanner .banner-wrapper .banner-content .field--name-name {
+/* line 38, scss/defaults.scss */
+.view-multibanners .banner-wrapper .banner-content .field--name-name {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
 }
 @media (max-width: 960px) {
-  /* line 37, scss/defaults.scss */
-  .multibanner .banner-wrapper .banner-content .field--name-name {
+  /* line 38, scss/defaults.scss */
+  .view-multibanners .banner-wrapper .banner-content .field--name-name {
     font-size: 1.75em;
   }
 }

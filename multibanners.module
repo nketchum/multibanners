@@ -46,10 +46,10 @@ function multibanners_theme() {
       'render element' => 'elements',
       'template' => 'banner',
     ),
-    'views_view_banner' => array(
+    'views_view_multibanner' => array(
       'file' => 'multibanners.theme.inc',
       'render element' => 'elements',
-      'template' => 'views_view_banner',
+      'template' => 'views_view_multibanner',
     ),
   );
 }
