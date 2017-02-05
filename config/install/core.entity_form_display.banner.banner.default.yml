@@ -3,10 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.banner.banner.field_banner_image
+    - field.field.banner.banner.field_banner_link
     - field.field.banner.banner.field_banner_teaser
     - image.style.multibanners_preview
   module:
     - image
+    - link
     - multibanners
 id: banner.banner.default
 targetEntityType: banner
@@ -20,6 +22,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_image
+  field_banner_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   field_banner_teaser:
     weight: 3
     settings:

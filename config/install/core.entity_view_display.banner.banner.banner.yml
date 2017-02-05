@@ -4,10 +4,12 @@ dependencies:
   config:
     - core.entity_view_mode.banner.banner
     - field.field.banner.banner.field_banner_image
+    - field.field.banner.banner.field_banner_link
     - field.field.banner.banner.field_banner_teaser
     - image.style.multibanners_banner
   module:
     - image
+    - link
     - multibanners
 id: banner.banner.banner
 targetEntityType: banner
@@ -22,6 +24,17 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_banner_link:
+    type: link
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
   field_banner_teaser:
     type: string
     weight: 2

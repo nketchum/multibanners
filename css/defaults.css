@@ -42,6 +42,14 @@
   padding: 6.65em 3.35em;
 }
 /* line 41, scss/defaults.scss */
+.multibanners ul li .banner-content .banner-content-inner a.banner-link {
+  color: #fefefe;
+}
+/* line 44, scss/defaults.scss */
+.multibanners ul li .banner-content .banner-content-inner a.banner-link:hover {
+  text-decoration: none;
+}
+/* line 49, scss/defaults.scss */
 .multibanners ul li .banner-content .banner-content-inner .field--name-name {
   font-weight: bold;
   letter-spacing: 0.05em;
