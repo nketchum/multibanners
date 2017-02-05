@@ -1,5 +1,6 @@
 // Multibanner sliding banners
 
+@import "breakpoint";
 @import "variables";
 
 .unslider {
@@ -48,6 +49,35 @@
 
         &.unslider-active {
           background: $darkest;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.multibanners-type-banner {
+
+  ul {
+
+    li {
+
+      .banner-content {
+
+        .banner-content-inner {
+
+          .field--name-name {
+            font-size: 2.75em;
+
+            @include breakpoint(max-width 1000px) {
+              font-size: 1.65em;
+            }
+
+          }
+
         }
 
       }

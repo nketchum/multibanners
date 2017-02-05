@@ -3,10 +3,12 @@
     {{ content.field_banner_image }}
   {% endif %}
   <div class="banner-content">
-  {% for key, value in content %}
-    {% if key != 'field_banner_image' %}
-      {{ value }}
-    {% endif %}
-  {% endfor %}
+    <div class="banner-content-inner">
+    {% for key, value in content %}
+      {% if key != 'field_banner_image' %}
+        {{ value }}
+      {% endif %}
+    {% endfor %}
+    </div>
   </div>
 </div>
