@@ -62,6 +62,10 @@ function template_preprocess_views_view_multibanner(&$variables) {
   $variables['attributes']['class'][] = 'multibanners-type-'. (isset($banner_type) ? $banner_type : 'banner');
   $variables['attributes']['class'][] = 'multibanners-count-'. ((string) count($variables['view']->result));
 
+  // Set helper variables.
+  $variables['banner_type'] = isset($banner_type) ? $banner_type : 'banner';
+  $variables['banner_count'] = (string) count($variables['view']->result);
+
   // Finish rendering.
   template_preprocess_views_view_unformatted($variables);
 }
