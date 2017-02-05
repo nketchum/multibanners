@@ -48,7 +48,9 @@ function template_preprocess_views_view_multibanner(&$variables) {
     $variables['attributes']['class'] = array();
   }
 
-  // Set banner classes if set on host node.
+  // Prepare template variables/classes.
+  $banner_count = count($variables['view']->result);
+  $banner_type = 'banner';
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     if ($node->hasField('field_banner_type')) {
       if (count($node->get('field_banner_type')->getValue())) {
@@ -57,14 +59,14 @@ function template_preprocess_views_view_multibanner(&$variables) {
     }
   }
 
-  // Set banner type class.
-  $variables['attributes']['class'][] = 'multibanners';
-  $variables['attributes']['class'][] = 'multibanners-type-'. (isset($banner_type) ? $banner_type : 'banner');
-  $variables['attributes']['class'][] = 'multibanners-count-'. ((string) count($variables['view']->result));
+  // Assign template variables.
+  $variables['banner_type'] = $banner_type;
+  $variables['banner_count'] = $banner_count;
 
-  // Set helper variables.
-  $variables['banner_type'] = isset($banner_type) ? $banner_type : 'banner';
-  $variables['banner_count'] = (string) count($variables['view']->result);
+  // Assign template classes.
+  $variables['attributes']['class'][] = 'multibanners';
+  $variables['attributes']['class'][] = 'multibanners-type-'. $banner_type;
+  $variables['attributes']['class'][] = 'multibanners-count-'. $banner_count;
 
   // Finish rendering.
   template_preprocess_views_view_unformatted($variables);

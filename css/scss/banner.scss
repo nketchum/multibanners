@@ -3,6 +3,7 @@
 @import "variables";
 
 .unslider {
+  position: relative;
 
   .unslider-arrow {
     background: $darkest;
@@ -10,6 +11,7 @@
     color: $lightest;
     font-size: 0.75em;
     letter-spacing: 0.15em;
+    margin-bottom: -2.25em;
     padding: 1.5em;
     text-transform: uppercase;
     z-index: 20;

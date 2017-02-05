@@ -3,14 +3,10 @@
     {{ content.field_banner_image }}
   {% endif %}
   <div class="banner-content">
-    {% if content.user_id %}
-      {{ content.user_id }}
+  {% for key, value in content %}
+    {% if key != 'field_banner_image' %}
+      {{ value }}
     {% endif %}
-    {% if content.name %}
-      {{ content.name }}
-    {% endif %}
-    {% if content.field_banner_teaser %}
-      {{ content.field_banner_teaser }}
-    {% endif %}
+  {% endfor %}
   </div>
 </div>

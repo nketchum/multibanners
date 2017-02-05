@@ -5,13 +5,47 @@
 
 .multibanners-type-flex {
 
-  li {
+  ul li {
     float: left;
+
+    .banner-content {
+      padding: 2em;
+      width: 100%;
+    }
+
   }
 
+  &.multibanners-count-1 {
+
+    ul li {
+      float: none;
+      width: 100%;
+    }
+
+  }
+
+  &.multibanners-count-2,
+  &.multibanners-count-4 {
+
+    ul li {
+      width: percentage(1/2);
+
+      @include breakpoint(max-width 960px) {
+        width: percentage(1/2);
+      }
+
+      @include breakpoint(max-width 480px) {
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  &.multibanners-count-6,
   &.multibanners-count-9 {
 
-    li {
+    ul li {
       width: percentage(1/3);
 
       @include breakpoint(max-width 960px) {
@@ -19,7 +53,105 @@
       }
 
       @include breakpoint(max-width 480px) {
-        width: percentage(1);
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  &.multibanners-count-3 {
+
+    ul li {
+      width: percentage(1/3);
+
+      @include breakpoint(max-width 960px) {
+        width: percentage(1/2);
+      }
+
+      @include breakpoint(max-width 480px) {
+        width: 100%;
+      }
+
+      &.banner-count-1 {
+        @include breakpoint(min-width 960px) {
+          width: percentage(2/3);
+        }
+
+        @include breakpoint(max-width 960px) {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  &.multibanners-count-5 {
+
+    ul li {
+      width: percentage(1/4);
+
+      @include breakpoint(max-width 960px) {
+        width: percentage(1/2);
+      }
+
+      @include breakpoint(max-width 480px) {
+        width: 100%;
+      }
+
+      &.banner-count-1 {
+        @include breakpoint(min-width 960px) {
+          width: percentage(1/2);
+        }
+
+        @include breakpoint(max-width 960px) {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  &.multibanners-count-7 {
+
+    ul li {
+      width: percentage(1/5);
+
+      @include breakpoint(max-width 960px) {
+        width: percentage(1/2);
+      }
+
+      @include breakpoint(max-width 480px) {
+        width: 100%;
+      }
+
+      &.banner-count-1 {
+        @include breakpoint(min-width 960px) {
+          width: percentage(1/2.5);
+        }
+
+        @include breakpoint(max-width 960px) {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  &.multibanners-count-8 {
+
+    ul li {
+      width: percentage(1/4);
+
+      @include breakpoint(max-width 960px) {
+        width: percentage(1/2);
+      }
+
+      @include breakpoint(max-width 480px) {
+        width: 100%;
       }
 
     }

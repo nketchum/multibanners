@@ -17,6 +17,7 @@
       position: relative;
 
       img {
+        display: block;
         height: auto;
         max-width: 100%;
         min-width: 100%;
@@ -27,13 +28,9 @@
         bottom: 0;
         color: $lightest;
         left: 0;
-        padding: 2em 4em;
+        padding: 3.35em;
         position: absolute;
         z-index: 10;
-
-        @include breakpoint(max-width 960px) {
-          padding: 1em 2em;
-        }
 
         .field--name-name {
           font-size: 2em;

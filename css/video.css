@@ -2,19 +2,68 @@
 .multibanners-type-video li {
   float: left;
 }
-/* line 14, scss/video.scss */
-.multibanners-type-video.multibanners-count-9 li {
+/* line 11, scss/video.scss */
+.multibanners-type-video li .banner-content {
+  width: 100%;
+}
+/* line 19, scss/video.scss */
+.multibanners-type-video.multibanners-count-1 li {
+  float: none;
+  width: 100%;
+}
+/* line 29, scss/video.scss */
+.multibanners-type-video.multibanners-count-2 li, .multibanners-type-video.multibanners-count-4 li {
+  width: 50%;
+}
+/* line 39, scss/video.scss */
+.multibanners-type-video.multibanners-count-3 li, .multibanners-type-video.multibanners-count-6 li, .multibanners-type-video.multibanners-count-9 li {
   width: 33.33333%;
 }
+/* line 47, scss/video.scss */
+.multibanners-type-video.multibanners-count-5 li {
+  width: 25%;
+}
+/* line 55, scss/video.scss */
+.multibanners-type-video.multibanners-count-7 li {
+  width: 20%;
+}
+/* line 63, scss/video.scss */
+.multibanners-type-video.multibanners-count-8 li {
+  width: 25%;
+}
 @media (max-width: 960px) {
-  /* line 14, scss/video.scss */
-  .multibanners-type-video.multibanners-count-9 li {
+  /* line 78, scss/video.scss */
+  .multibanners-type-video.multibanners-count-2 li, .multibanners-type-video.multibanners-count-3 li, .multibanners-type-video.multibanners-count-4 li, .multibanners-type-video.multibanners-count-5 li, .multibanners-type-video.multibanners-count-6 li, .multibanners-type-video.multibanners-count-7 li, .multibanners-type-video.multibanners-count-8 li, .multibanners-type-video.multibanners-count-9 li {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  /* line 14, scss/video.scss */
-  .multibanners-type-video.multibanners-count-9 li {
+  /* line 78, scss/video.scss */
+  .multibanners-type-video.multibanners-count-2 li, .multibanners-type-video.multibanners-count-3 li, .multibanners-type-video.multibanners-count-4 li, .multibanners-type-video.multibanners-count-5 li, .multibanners-type-video.multibanners-count-6 li, .multibanners-type-video.multibanners-count-7 li, .multibanners-type-video.multibanners-count-8 li, .multibanners-type-video.multibanners-count-9 li {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 95, scss/video.scss */
+  .multibanners-type-video.multibanners-count-5 li.banner-count-1 {
+    width: 50%;
+  }
+}
+@media (max-width: 960px) {
+  /* line 95, scss/video.scss */
+  .multibanners-type-video.multibanners-count-5 li.banner-count-1 {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 113, scss/video.scss */
+  .multibanners-type-video.multibanners-count-7 li.banner-count-1 {
+    width: 40%;
+  }
+}
+@media (max-width: 960px) {
+  /* line 113, scss/video.scss */
+  .multibanners-type-video.multibanners-count-7 li.banner-count-1 {
     width: 100%;
   }
 }

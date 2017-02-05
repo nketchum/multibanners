@@ -1,35 +1,40 @@
-/* line 7, scss/banner.scss */
+/* line 5, scss/banner.scss */
+.unslider {
+  position: relative;
+}
+/* line 8, scss/banner.scss */
 .unslider .unslider-arrow {
-  background: #343434;
+  background: #010101;
   bottom: 50%;
   color: #fefefe;
   font-size: 0.75em;
   letter-spacing: 0.15em;
+  margin-bottom: -2.25em;
   padding: 1.5em;
   text-transform: uppercase;
   z-index: 20;
 }
-/* line 17, scss/banner.scss */
+/* line 19, scss/banner.scss */
 .unslider .unslider-arrow.prev {
   left: 0;
 }
-/* line 21, scss/banner.scss */
+/* line 23, scss/banner.scss */
 .unslider .unslider-arrow.next {
   right: 0;
 }
-/* line 25, scss/banner.scss */
+/* line 27, scss/banner.scss */
 .unslider .unslider-arrow:hover {
   background: #fefefe;
-  color: #343434;
+  color: #010101;
 }
-/* line 31, scss/banner.scss */
+/* line 33, scss/banner.scss */
 .unslider .unslider-nav {
   bottom: 0;
   position: absolute;
   text-align: center;
   width: 100%;
 }
-/* line 37, scss/banner.scss */
+/* line 39, scss/banner.scss */
 .unslider .unslider-nav ol {
   background: #fefefe;
   display: inline-block;
@@ -37,11 +42,11 @@
   position: relative;
   z-index: 20;
 }
-/* line 44, scss/banner.scss */
+/* line 46, scss/banner.scss */
 .unslider .unslider-nav ol li {
-  border-color: #343434;
+  border-color: #010101;
 }
-/* line 47, scss/banner.scss */
+/* line 49, scss/banner.scss */
 .unslider .unslider-nav ol li.unslider-active {
-  background: #343434;
+  background: #010101;
 }

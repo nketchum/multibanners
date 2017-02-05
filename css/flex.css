@@ -1,20 +1,146 @@
 /* line 8, scss/flex.scss */
-.multibanners-type-flex li {
+.multibanners-type-flex ul li {
   float: left;
 }
-/* line 14, scss/flex.scss */
-.multibanners-type-flex.multibanners-count-9 li {
-  width: 33.33333%;
+/* line 11, scss/flex.scss */
+.multibanners-type-flex ul li .banner-content {
+  padding: 2em;
+  width: 100%;
+}
+/* line 20, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-1 ul li {
+  float: none;
+  width: 100%;
+}
+/* line 30, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-2 ul li, .multibanners-type-flex.multibanners-count-4 ul li {
+  width: 50%;
 }
 @media (max-width: 960px) {
-  /* line 14, scss/flex.scss */
-  .multibanners-type-flex.multibanners-count-9 li {
+  /* line 30, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-2 ul li, .multibanners-type-flex.multibanners-count-4 ul li {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  /* line 14, scss/flex.scss */
-  .multibanners-type-flex.multibanners-count-9 li {
+  /* line 30, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-2 ul li, .multibanners-type-flex.multibanners-count-4 ul li {
+    width: 100%;
+  }
+}
+/* line 48, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-6 ul li, .multibanners-type-flex.multibanners-count-9 ul li {
+  width: 33.33333%;
+}
+@media (max-width: 960px) {
+  /* line 48, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-6 ul li, .multibanners-type-flex.multibanners-count-9 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 48, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-6 ul li, .multibanners-type-flex.multibanners-count-9 ul li {
+    width: 100%;
+  }
+}
+/* line 65, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-3 ul li {
+  width: 33.33333%;
+}
+@media (max-width: 960px) {
+  /* line 65, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-3 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 65, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-3 ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 76, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-3 ul li.banner-count-1 {
+    width: 66.66667%;
+  }
+}
+@media (max-width: 960px) {
+  /* line 76, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-3 ul li.banner-count-1 {
+    width: 100%;
+  }
+}
+/* line 92, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-5 ul li {
+  width: 25%;
+}
+@media (max-width: 960px) {
+  /* line 92, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-5 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 92, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-5 ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 103, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-5 ul li.banner-count-1 {
+    width: 50%;
+  }
+}
+@media (max-width: 960px) {
+  /* line 103, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-5 ul li.banner-count-1 {
+    width: 100%;
+  }
+}
+/* line 119, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-7 ul li {
+  width: 20%;
+}
+@media (max-width: 960px) {
+  /* line 119, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-7 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 119, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-7 ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 130, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-7 ul li.banner-count-1 {
+    width: 40%;
+  }
+}
+@media (max-width: 960px) {
+  /* line 130, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-7 ul li.banner-count-1 {
+    width: 100%;
+  }
+}
+/* line 146, scss/flex.scss */
+.multibanners-type-flex.multibanners-count-8 ul li {
+  width: 25%;
+}
+@media (max-width: 960px) {
+  /* line 146, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-8 ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 146, scss/flex.scss */
+  .multibanners-type-flex.multibanners-count-8 ul li {
     width: 100%;
   }
 }
