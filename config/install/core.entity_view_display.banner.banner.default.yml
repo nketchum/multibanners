@@ -8,7 +8,6 @@ dependencies:
   module:
     - image
     - multibanners
-    - user
 id: banner.banner.default
 targetEntityType: banner
 bundle: banner
@@ -36,10 +35,5 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: author
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  user_id: true

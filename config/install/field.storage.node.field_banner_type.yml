@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: banner
-      label: 'Large banner'
+      label: 'Banner'
     -
       value: flex
-      label: 'Flexible'
+      label: 'Flex'
     -
       value: video
       label: 'Video'

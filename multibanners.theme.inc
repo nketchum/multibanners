@@ -32,20 +32,23 @@ function template_preprocess_banner(&$variables) {
  */
 function template_preprocess_views_view_multibanner(&$variables) {
   $handler  = $variables['view']->style_plugin;
+
   // Fetch classes from handler options.
   if ($handler->options['class']) {
     $class = explode(' ', $handler->options['class']);
     $class = array_map('\Drupal\Component\Utility\Html::cleanCssIdentifier', $class);
-    // Initialize a new attribute class for $class.
     $variables['list']['attributes'] = new Attribute(array('class' => $class));
   }
+
   // Fetch wrapper classes from handler options.
   if ($handler->options['wrapper_class']) {
     $wrapper_class = explode(' ', $handler->options['wrapper_class']);
     $variables['attributes']['class'] = array_map('\Drupal\Component\Utility\Html::cleanCssIdentifier', $wrapper_class);
+  } else {
+    $variables['attributes']['class'] = array();
   }
+
   // Set banner classes if set on host node.
-  $banner_type = 'banner';
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     if ($node->hasField('field_banner_type')) {
       if (count($node->get('field_banner_type')->getValue())) {
@@ -53,13 +56,12 @@ function template_preprocess_views_view_multibanner(&$variables) {
       }
     }
   }
+
   // Set banner type class.
-  $variables['attributes']['class'][] = 'multibanner-'. $banner_type;
-  // Set extra type classes.
-  if ($banner_type === 'banner') {
-    $variables['attributes']['class'][] = 'slider-wrapper';
-    $variables['list']['attributes'] = new Attribute(array('class' => 'slider'));
-  }
+  $variables['attributes']['class'][] = 'multibanners';
+  $variables['attributes']['class'][] = 'multibanners-type-'. (isset($banner_type) ? $banner_type : 'banner');
+  $variables['attributes']['class'][] = 'multibanners-count-'. ((string) count($variables['view']->result));
+
   // Finish rendering.
   template_preprocess_views_view_unformatted($variables);
 }

@@ -55,21 +55,12 @@ function multibanners_theme() {
 }
 
 /**
- * Implements hook_preprocess_views_view().
- */
-function multibanners_preprocess_views_view(&$variables) {
-  if ($variables['id'] === 'multibanners') {
-    $variables['attributes']['class'][] = 'banner-count-'. count($variables['view']->result);
-  }
-}
-
-/**
  * Implements hook_field_widget_form_alter().
  */
 function multibanners_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
   if (array_key_exists('entities', $element)) {
     if ($element['entities']['#entity_type'] === 'banner') {
-      // Hide "add" buttons when after the ninth banner is added.
+      // Hide "add" buttons after nine banners.
       $num_entities = 0;
       foreach ($element['entities'] as $key => $value) {
         if (is_numeric($key)) {

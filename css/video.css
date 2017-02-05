@@ -1,20 +1,20 @@
 /* line 8, scss/video.scss */
-.view-multibanners .multibanner-video .banner-wrapper {
+.multibanners-type-video li {
   float: left;
 }
-/* line 12, scss/video.scss */
-.view-multibanners.banner-count-9 .banner-wrapper {
+/* line 14, scss/video.scss */
+.multibanners-type-video.multibanners-count-9 li {
   width: 33.33333%;
 }
 @media (max-width: 960px) {
-  /* line 12, scss/video.scss */
-  .view-multibanners.banner-count-9 .banner-wrapper {
+  /* line 14, scss/video.scss */
+  .multibanners-type-video.multibanners-count-9 li {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  /* line 12, scss/video.scss */
-  .view-multibanners.banner-count-9 .banner-wrapper {
+  /* line 14, scss/video.scss */
+  .multibanners-type-video.multibanners-count-9 li {
     width: 100%;
   }
 }

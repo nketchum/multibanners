@@ -3,45 +3,46 @@
 @import "breakpoint";
 @import "variables";
 
-.view-multibanners {
+.multibanners {
   overflow: hidden;
 
-  ul, ol {
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
 
-  .banner-wrapper {
-    overflow: hidden;
-    position: relative;
+    li {
+      overflow: hidden;
+      position: relative;
 
-    img {
-      height: auto;
-      max-width: 100%;
-      min-width: 100%;
-    }
-
-    .banner-content {
-      background: rgba($darkest, 0.5);
-      bottom: 0;
-      color: $lightest;
-      padding: 2em 4em;
-      position: absolute;
-      right: 0;
-      z-index: 10;
-
-      @include breakpoint(max-width 960px) {
-        padding: 1em 2em;
+      img {
+        height: auto;
+        max-width: 100%;
+        min-width: 100%;
       }
 
-      .field--name-name {
-        font-size: 2em;
-        font-weight: bold;
-        text-transform: uppercase;
+      .banner-content {
+        background: rgba($darkest, 0.5);
+        bottom: 0;
+        color: $lightest;
+        left: 0;
+        padding: 2em 4em;
+        position: absolute;
+        z-index: 10;
 
         @include breakpoint(max-width 960px) {
-          font-size: 1.75em;
+          padding: 1em 2em;
+        }
+
+        .field--name-name {
+          font-size: 2em;
+          font-weight: bold;
+          text-transform: uppercase;
+
+          @include breakpoint(max-width 960px) {
+            font-size: 1.75em;
+          }
+
         }
 
       }

@@ -3,7 +3,6 @@
 @import "variables";
 
 .unslider {
-  position: relative;
 
   .unslider-arrow {
     background: $darkest;
@@ -55,12 +54,4 @@
 
   }
 
-}
-
-.banner-wrapper {
-  .banner-banner {
-    .banner-content {
-      text-align: right;
-    }
-  }
 }

@@ -59,13 +59,17 @@ display:
       style:
         type: multibanner
         options:
-          row_class: 'banner-wrapper banner-count-{{ counter }}'
+          grouping: {  }
+          row_class: 'banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
           wrapper_class: ''
           class: ''
       row:
         type: 'entity:banner'
+        options:
+          relationship: none
+          view_mode: default
       fields:
         counter:
           id: counter
@@ -184,7 +188,7 @@ display:
   banner:
     display_plugin: block
     id: banner
-    display_title: 'Banner block'
+    display_title: Banner
     position: 2
     display_options:
       display_extenders: {  }
@@ -247,11 +251,11 @@ display:
         type: multibanner
         options:
           grouping: {  }
-          row_class: 'banner-wrapper banner-num-{{ counter }}'
+          row_class: 'banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
-          wrapper_class: slider-wrapper
-          class: slider
+          wrapper_class: ''
+          class: ''
       row:
         type: 'entity:banner'
         options:
@@ -329,7 +333,7 @@ display:
         type: multibanner
         options:
           grouping: {  }
-          row_class: 'banner-wrapper banner-count-{{ counter }}'
+          row_class: 'banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
           wrapper_class: ''
@@ -349,7 +353,7 @@ display:
   video:
     display_plugin: block
     id: video
-    display_title: 'Video block'
+    display_title: Video
     position: 4
     display_options:
       display_extenders: {  }
@@ -410,7 +414,8 @@ display:
       style:
         type: multibanner
         options:
-          row_class: 'banner-wrapper banner-count-{{ counter }}'
+          grouping: {  }
+          row_class: 'banner-count-{{ counter }}'
           default_row_class: false
           uses_fields: true
           wrapper_class: ''
