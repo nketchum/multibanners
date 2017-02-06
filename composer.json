@@ -1,0 +1,10 @@
+{
+  "name": "nketchum/multibanners",
+  "description": "Customizable and client-configurable banner content type entity and associated fields.",
+  "type": "drupal-module",
+  "homepage": "https://github.com/nketchum/multibanners",
+  "support": {
+    "issues": "https://github.com/nketchum/multibanners/issues"
+  },
+  "license": "GPL-2.0+"
+}

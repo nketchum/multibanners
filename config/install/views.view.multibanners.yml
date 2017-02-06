@@ -2,9 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.banner.banner
+    - core.entity_view_mode.banner.slider
     - core.entity_view_mode.banner.flex
-    - core.entity_view_mode.banner.video
   module:
     - multibanners
     - node
@@ -185,17 +184,17 @@ display:
         - url
         - user.permissions
       tags: {  }
-  banner:
+  slider:
     display_plugin: block
-    id: banner
-    display_title: Banner
+    id: slider
+    display_title: Slider
     position: 2
     display_options:
       display_extenders: {  }
       display_description: ''
       block_category: Multibanners
       block_hide_empty: true
-      block_description: 'Multibanner: Banner'
+      block_description: 'Multibanner: Slider'
       filters:
         field_banner_type_value:
           id: field_banner_type_value
@@ -207,7 +206,6 @@ display:
           operator: not
           value:
             flex: flex
-            video: video
           group: 1
           exposed: false
           expose:
@@ -260,7 +258,7 @@ display:
         type: 'entity:banner'
         options:
           relationship: none
-          view_mode: banner
+          view_mode: slider
     cache_metadata:
       max-age: -1
       contexts:
@@ -343,88 +341,6 @@ display:
         options:
           relationship: none
           view_mode: flex
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - user.permissions
-      tags: {  }
-  video:
-    display_plugin: block
-    id: video
-    display_title: Video
-    position: 4
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      block_category: Multibanners
-      block_hide_empty: true
-      block_description: 'Multibanner: Video'
-      filters:
-        field_banner_type_value:
-          id: field_banner_type_value
-          table: node__field_banner_type
-          field: field_banner_type_value
-          relationship: reverse__node__field_banner_refs
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            video: video
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
-        css_class: true
-        style: false
-        row: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: multibanner
-        options:
-          grouping: {  }
-          row_class: 'banner-count-{{ counter }}'
-          default_row_class: false
-          uses_fields: true
-          wrapper_class: ''
-          class: ''
-      row:
-        type: 'entity:banner'
-        options:
-          relationship: none
-          view_mode: video
     cache_metadata:
       max-age: -1
       contexts:

@@ -2,25 +2,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.banner.video
+    - core.entity_view_mode.banner.slider
     - field.field.banner.banner.field_banner_image
     - field.field.banner.banner.field_banner_link
     - field.field.banner.banner.field_banner_teaser
-    - image.style.multibanners_video
+    - image.style.multibanners_slider
   module:
     - image
     - link
     - multibanners
-id: banner.banner.video
+id: banner.banner.slider
 targetEntityType: banner
 bundle: banner
-mode: video
+mode: slider
 content:
   field_banner_image:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
-      image_style: multibanners_video
+      image_style: multibanners_slider
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -37,7 +37,7 @@ content:
     third_party_settings: {  }
   field_banner_teaser:
     type: string
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -45,7 +45,7 @@ content:
   name:
     label: hidden
     type: string
-    weight: 0
+    weight: 1
     settings:
       link_to_entity: false
     third_party_settings: {  }

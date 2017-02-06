@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - multibanners
-id: banner.video
-label: Video
-targetEntityType: banner
-cache: true

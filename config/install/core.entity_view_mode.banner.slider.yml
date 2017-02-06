@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - multibanners
-id: banner.banner
-label: Banner
+id: banner.slider
+label: Slider
 targetEntityType: banner
 cache: true

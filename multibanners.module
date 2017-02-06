@@ -25,14 +25,11 @@ function multibanners_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_preprocess_block().
  */
 function multibanners_preprocess_block(&$variables) {
-  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-banner') {
-    $variables['#attached']['library'][] = 'multibanners/banner';
+  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-slider') {
+    $variables['#attached']['library'][] = 'multibanners/slider';
   }
   if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-flex') {
     $variables['#attached']['library'][] = 'multibanners/flex';
-  }
-  if ($variables['elements']['#plugin_id'] === 'views_block:multibanners-video') {
-    $variables['#attached']['library'][] = 'multibanners/video';
   }
 }
 

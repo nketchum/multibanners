@@ -3,7 +3,7 @@
  */
 (function ($, Drupal) {
   $(function() {
-    $('.multibanners-type-banner').unslider({
+    $('.multibanners-type-slider').unslider({
       animation: 'horizontal',
       arrows: true,
       autoplay: false,

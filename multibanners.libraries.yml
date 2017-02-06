@@ -1,14 +1,14 @@
-banner:
+slider:
   version: VERSION
   js:
     /libraries/unslider/dist/js/unslider-min.js: {}
-    js/banner.js: {}
+    js/slider.js: {}
   css:
     theme:
       /libraries/unslider/dist/css/unslider.css: {}
       /libraries/unslider/dist/css/unslider-dots.css: {}
       css/defaults.css: {}
-      css/banner.css: {}
+      css/slider.css: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
@@ -21,10 +21,3 @@ flex:
     theme:
       css/defaults.css: {}
       css/flex.css: {}
-
-video:
-  version: VERSION
-  css:
-    theme:
-      css/defaults.css: {}
-      css/video.css: {}

@@ -50,7 +50,7 @@ function template_preprocess_views_view_multibanner(&$variables) {
 
   // Prepare template variables/classes.
   $banner_count = count($variables['view']->result);
-  $banner_type = 'banner';
+  $banner_type = 'slider';
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     if ($node->hasField('field_banner_type')) {
       if (count($node->get('field_banner_type')->getValue())) {

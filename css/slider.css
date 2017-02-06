@@ -52,12 +52,12 @@
 }
 
 /* line 72, scss/banner.scss */
-.multibanners-type-banner ul li .banner-content .banner-content-inner .field--name-name {
+.multibanners-type-slider ul li .banner-content .banner-content-inner .field--name-name {
   font-size: 2.75em;
 }
 @media (max-width: 1000px) {
   /* line 72, scss/banner.scss */
-  .multibanners-type-banner ul li .banner-content .banner-content-inner .field--name-name {
+  .multibanners-type-slider ul li .banner-content .banner-content-inner .field--name-name {
     font-size: 1.65em;
   }
 }

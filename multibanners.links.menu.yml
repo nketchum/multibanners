@@ -3,3 +3,15 @@ banner.admin.structure.settings:
   description: 'Configure banners'
   route_name: banner.settings
   parent: system.admin_structure
+
+entity.banner.collection:
+  title: 'Banners'
+  parent: system.admin_content
+  description: 'Find and manage banners.'
+  route_name: entity.banner.collection
+
+entity.banner.add:
+  title: 'Add banner'
+  parent: entity.banner.collection
+  description: 'Add a new banner.'
+  route_name: entity.banner.add_form
