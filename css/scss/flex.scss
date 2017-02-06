@@ -103,7 +103,7 @@
 
     ul li {
 
-      &.banner-count-1 {
+      &:first-child {
 
         @include breakpoint(min-width 1000px) {
           width: percentage(2/3);
@@ -122,7 +122,7 @@
 
     ul li {
 
-      &.banner-count-1 {
+      &:first-child {
 
         @include breakpoint(min-width 1000px) {
           width: percentage(1/2);
@@ -151,7 +151,7 @@
         width: 100%;
       }
 
-      &.banner-count-1 {
+      &:first-child {
         @include breakpoint(min-width 1000px) {
           width: percentage(1/2.5);
         }
@@ -171,7 +171,7 @@
   &.multibanners-count-5,
   &.multibanners-count-7 {
 
-    ul li.banner-count-1 {
+    ul li:first-child {
 
       @include breakpoint(min-width 500px) {
         .banner-content .banner-content-inner .field--name-name {
@@ -186,7 +186,7 @@
 
   &.multibanners-count-9 {
 
-    ul li.banner-count-1 {
+    ul li:first-child {
 
       @include breakpoint(max-width 1000px) {
         width: 100%;
