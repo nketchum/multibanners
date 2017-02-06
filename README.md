@@ -1,6 +1,6 @@
 ###How to Configure Multibanners
 
-1. Modules: Require multibanners module, focal_point module, and unslider library in project composer.json
+1. Modules: Require multibanners module, focal_point module, inline_entity_form module, and unslider library in project composer.json
 2. Install multibanners module
 3. Set "banner" entity permissions
 4. Add field_banners_ref to desired node type so that:
